@@ -1,8 +1,10 @@
 import { Router } from "express";
-import { userRouter } from "../modules/user/user.routes";
+import { postRoutes } from "../modules/post/post.routes";
+import { userRoutes } from "../modules/user/user.routes";
 
 export const router = Router()
 
-router.use("/user", userRouter)
+router.use("/user", userRoutes)
+router.use("/post", postRoutes)
 
 
